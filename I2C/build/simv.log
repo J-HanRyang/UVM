@@ -1,0 +1,163 @@
+Command: /home/hedu52/dev/I2C_WRITE/./build/simv +UVM_TESTNAME=i2c_test -l ./build/simv.log +fsdbfile+./build/wave.fsdb
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP1_Full64; Runtime version W-2024.09-SP1_Full64;  Nov 20 09:33 2025
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2, Linux x86_64/64bit, 03/03/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file './build/wave.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+*Verdi* WARNING: Env/runtime option has specified fsdbfile name as "./build/wave.fsdb". Fsdbfile name in task "wave.fsdb" is ignored.
+UVM_INFO @ 0: reporter [RNTST] Running test i2c_test...
+UVM_INFO ./tb/UVM_I2C.sv(716) @ 0: uvm_test_top [TEST] build_phase start
+UVM_INFO ./tb/UVM_I2C.sv(719) @ 0: uvm_test_top [TEST] build_phase end
+UVM_INFO ./tb/UVM_I2C.sv(686) @ 0: uvm_test_top.ENV [ENV] build_phase start
+UVM_INFO ./tb/UVM_I2C.sv(689) @ 0: uvm_test_top.ENV [ENV] build_phase end
+UVM_INFO ./tb/UVM_I2C.sv(655) @ 0: uvm_test_top.ENV.AGT [AGT] build_phase start
+UVM_INFO ./tb/UVM_I2C.sv(659) @ 0: uvm_test_top.ENV.AGT [AGT] build_phase end
+UVM_INFO ./tb/UVM_I2C.sv(145) @ 0: uvm_test_top.ENV.AGT.DRV [DRV] build_phase start
+UVM_INFO ./tb/UVM_I2C.sv(148) @ 0: uvm_test_top.ENV.AGT.DRV [DRV] build_phase end : i2c_if connected
+UVM_INFO ./tb/UVM_I2C.sv(664) @ 0: uvm_test_top.ENV.AGT [AGT] connect_phase: DRV <-> SEQR
+UVM_INFO ./tb/UVM_I2C.sv(694) @ 0: uvm_test_top.ENV [ENV] connect_phase: AGT.MON -> SCB
+UVM_INFO ./tb/UVM_I2C.sv(723) @ 0: uvm_test_top [TEST] run_phase start : raise_objection
+UVM_INFO ./tb/UVM_I2C.sv(726) @ 0: uvm_test_top [TEST] start sequence
+UVM_INFO ./tb/UVM_I2C.sv(82) @ 0: uvm_test_top.ENV.AGT.SEQR@@SEQ [SEQ] --- REG WRITE/READ TEST START ---
+UVM_INFO ./tb/UVM_I2C.sv(85) @ 0: uvm_test_top.ENV.AGT.SEQR@@SEQ [SEQ] Test Register 0
+UVM_INFO ./tb/UVM_I2C.sv(306) @ 100000: uvm_test_top.ENV.AGT.DRV [DRV] wait for next item
+UVM_INFO ./tb/UVM_I2C.sv(264) @ 100000: uvm_test_top.ENV.AGT.DRV [DRV] DRV_WRITE : reg[0] <= 0x32
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 125000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(189) @ 190125000: uvm_test_top.ENV.AGT.DRV [DRV] Sending data = 0x32
+UVM_INFO ./tb/UVM_I2C.sv(366) @ 285165000: uvm_test_top.ENV.AGT.MON [MON] I2C STOP DETECT
+UVM_INFO ./tb/UVM_I2C.sv(537) @ 285165000: uvm_test_top.ENV.SCB [SCB] MODEL UPDATE : reg[0] <= 0x32
+UVM_INFO ./tb/UVM_I2C.sv(552) @ 285165000: uvm_test_top.ENV.SCB [SCB] ✓ WRITE PASS: reg[0] Model=0x32, DUT=0x32
+UVM_INFO ./tb/UVM_I2C.sv(306) @ 290165000: uvm_test_top.ENV.AGT.DRV [DRV] wait for next item
+UVM_INFO ./tb/UVM_I2C.sv(280) @ 290165000: uvm_test_top.ENV.AGT.DRV [DRV] DRV_READ : reg[0]
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 290195000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 480205000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(366) @ 675225000: uvm_test_top.ENV.AGT.MON [MON] I2C STOP DETECT
+UVM_INFO ./tb/UVM_I2C.sv(574) @ 675225000: uvm_test_top.ENV.SCB [SCB] ✓ READ PASS: reg[0] Expected=0x32, Read=0x32
+UVM_INFO ./tb/UVM_I2C.sv(85) @ 675235000: uvm_test_top.ENV.AGT.SEQR@@SEQ [SEQ] Test Register 1
+UVM_INFO ./tb/UVM_I2C.sv(306) @ 680225000: uvm_test_top.ENV.AGT.DRV [DRV] wait for next item
+UVM_INFO ./tb/UVM_I2C.sv(264) @ 680225000: uvm_test_top.ENV.AGT.DRV [DRV] DRV_WRITE : reg[1] <= 0xc6
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 680255000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(189) @ 870245000: uvm_test_top.ENV.AGT.DRV [DRV] Sending data = 0xc6
+UVM_INFO ./tb/UVM_I2C.sv(366) @ 965285000: uvm_test_top.ENV.AGT.MON [MON] I2C STOP DETECT
+UVM_INFO ./tb/UVM_I2C.sv(537) @ 965285000: uvm_test_top.ENV.SCB [SCB] MODEL UPDATE : reg[1] <= 0xc6
+UVM_INFO ./tb/UVM_I2C.sv(552) @ 965285000: uvm_test_top.ENV.SCB [SCB] ✓ WRITE PASS: reg[1] Model=0xc6, DUT=0xc6
+UVM_INFO ./tb/UVM_I2C.sv(306) @ 970285000: uvm_test_top.ENV.AGT.DRV [DRV] wait for next item
+UVM_INFO ./tb/UVM_I2C.sv(280) @ 970285000: uvm_test_top.ENV.AGT.DRV [DRV] DRV_READ : reg[1]
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 970315000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 1160325000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(366) @ 1355345000: uvm_test_top.ENV.AGT.MON [MON] I2C STOP DETECT
+UVM_INFO ./tb/UVM_I2C.sv(574) @ 1355345000: uvm_test_top.ENV.SCB [SCB] ✓ READ PASS: reg[1] Expected=0xc6, Read=0xc6
+UVM_INFO ./tb/UVM_I2C.sv(85) @ 1355355000: uvm_test_top.ENV.AGT.SEQR@@SEQ [SEQ] Test Register 2
+UVM_INFO ./tb/UVM_I2C.sv(306) @ 1360345000: uvm_test_top.ENV.AGT.DRV [DRV] wait for next item
+UVM_INFO ./tb/UVM_I2C.sv(264) @ 1360345000: uvm_test_top.ENV.AGT.DRV [DRV] DRV_WRITE : reg[2] <= 0x59
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 1360375000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(189) @ 1550365000: uvm_test_top.ENV.AGT.DRV [DRV] Sending data = 0x59
+UVM_INFO ./tb/UVM_I2C.sv(366) @ 1645405000: uvm_test_top.ENV.AGT.MON [MON] I2C STOP DETECT
+UVM_INFO ./tb/UVM_I2C.sv(537) @ 1645405000: uvm_test_top.ENV.SCB [SCB] MODEL UPDATE : reg[2] <= 0x59
+UVM_INFO ./tb/UVM_I2C.sv(552) @ 1645405000: uvm_test_top.ENV.SCB [SCB] ✓ WRITE PASS: reg[2] Model=0x59, DUT=0x59
+UVM_INFO ./tb/UVM_I2C.sv(306) @ 1650405000: uvm_test_top.ENV.AGT.DRV [DRV] wait for next item
+UVM_INFO ./tb/UVM_I2C.sv(280) @ 1650405000: uvm_test_top.ENV.AGT.DRV [DRV] DRV_READ : reg[2]
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 1650435000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 1840445000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(366) @ 2035465000: uvm_test_top.ENV.AGT.MON [MON] I2C STOP DETECT
+UVM_INFO ./tb/UVM_I2C.sv(574) @ 2035465000: uvm_test_top.ENV.SCB [SCB] ✓ READ PASS: reg[2] Expected=0x59, Read=0x59
+UVM_INFO ./tb/UVM_I2C.sv(85) @ 2035475000: uvm_test_top.ENV.AGT.SEQR@@SEQ [SEQ] Test Register 3
+UVM_INFO ./tb/UVM_I2C.sv(306) @ 2040465000: uvm_test_top.ENV.AGT.DRV [DRV] wait for next item
+UVM_INFO ./tb/UVM_I2C.sv(264) @ 2040465000: uvm_test_top.ENV.AGT.DRV [DRV] DRV_WRITE : reg[3] <= 0xe0
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 2040495000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(189) @ 2230485000: uvm_test_top.ENV.AGT.DRV [DRV] Sending data = 0xe0
+UVM_INFO ./tb/UVM_I2C.sv(366) @ 2325525000: uvm_test_top.ENV.AGT.MON [MON] I2C STOP DETECT
+UVM_INFO ./tb/UVM_I2C.sv(537) @ 2325525000: uvm_test_top.ENV.SCB [SCB] MODEL UPDATE : reg[3] <= 0xe0
+UVM_INFO ./tb/UVM_I2C.sv(552) @ 2325525000: uvm_test_top.ENV.SCB [SCB] ✓ WRITE PASS: reg[3] Model=0xe0, DUT=0xe0
+UVM_INFO ./tb/UVM_I2C.sv(306) @ 2330525000: uvm_test_top.ENV.AGT.DRV [DRV] wait for next item
+UVM_INFO ./tb/UVM_I2C.sv(280) @ 2330525000: uvm_test_top.ENV.AGT.DRV [DRV] DRV_READ : reg[3]
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 2330555000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(356) @ 2520565000: uvm_test_top.ENV.AGT.MON [MON] I2C START DETECT
+UVM_INFO ./tb/UVM_I2C.sv(366) @ 2715585000: uvm_test_top.ENV.AGT.MON [MON] I2C STOP DETECT
+UVM_INFO ./tb/UVM_I2C.sv(574) @ 2715585000: uvm_test_top.ENV.SCB [SCB] ✓ READ PASS: reg[3] Expected=0xe0, Read=0xe0
+UVM_INFO ./tb/UVM_I2C.sv(110) @ 2715595000: uvm_test_top.ENV.AGT.SEQR@@SEQ [SEQ] --- REG WRITE/READ TEST END ---
+UVM_INFO ./tb/UVM_I2C.sv(728) @ 2715595000: uvm_test_top [TEST] sequence done
+UVM_INFO ./tb/UVM_I2C.sv(731) @ 2715595000: uvm_test_top [TEST] run_phase drop_objection
+UVM_INFO ./tb/UVM_I2C.sv(733) @ 2715595000: uvm_test_top [TEST] run_phase end
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 2715595000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ./tb/UVM_I2C.sv(599) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] ========================================
+UVM_INFO ./tb/UVM_I2C.sv(601) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT]         SCOREBOARD REPORT                 
+UVM_INFO ./tb/UVM_I2C.sv(603) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] ========================================
+UVM_INFO ./tb/UVM_I2C.sv(605) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] Total Transactions  : 8
+UVM_INFO ./tb/UVM_I2C.sv(607) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] ----------------------------------------
+UVM_INFO ./tb/UVM_I2C.sv(609) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] WRITE Transactions  : 4
+UVM_INFO ./tb/UVM_I2C.sv(611) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT]   -> WRITE Passed   : 4
+UVM_INFO ./tb/UVM_I2C.sv(613) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT]   -> WRITE Failed   : 0
+UVM_INFO ./tb/UVM_I2C.sv(615) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] ----------------------------------------
+UVM_INFO ./tb/UVM_I2C.sv(617) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] READ Transactions   : 4
+UVM_INFO ./tb/UVM_I2C.sv(619) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT]   -> READ Passed    : 4
+UVM_INFO ./tb/UVM_I2C.sv(621) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT]   -> READ Failed    : 0
+UVM_INFO ./tb/UVM_I2C.sv(623) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] ========================================
+UVM_INFO ./tb/UVM_I2C.sv(627) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] *********** ALL TESTS PASSED ***********
+UVM_INFO ./tb/UVM_I2C.sv(632) @ 2715595000: uvm_test_top.ENV.SCB [SCB_REPORT] ========================================
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 2715595000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 2715595000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   92
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[AGT]     3
+[DRV]    22
+[ENV]     3
+[MON]    20
+[RNTST]     1
+[SCB]    12
+[SCB_REPORT]    15
+[SEQ]     6
+[TEST]     7
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+
+$finish called from file "/tools/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time           2715595000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2715595000 ps
+CPU Time:      0.520 seconds;       Data structure size:   0.6Mb
+Thu Nov 20 09:33:00 2025
